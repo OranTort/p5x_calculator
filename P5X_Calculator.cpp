@@ -12,8 +12,10 @@ int main(){
     int banners;
     int phantomTickets;
     int phantomJewels;
-    int cognigems;
+    int violetCognigems;
+    int clearCognigems;
     int rolls;
+    char pass;
 
     cout << "Select the character banner you are planning to roll on?(80 or 110) ";
     cin >> characterBanner;
@@ -39,6 +41,9 @@ int main(){
         cout << "Please select either 80 or 110 banners." << endl;
         return characterBanner;
     }
+
+    cout << "Did you purchase a pass? ";
+    cin >> pass;
     
     cout << "How many Metajewels do you currently own? ";
     cin >> ownedMetajewels;
@@ -55,10 +60,10 @@ int main(){
     neededMetajewels = neededMetajewels - phantomJewels;
 
     cout <<  "How many Violet Cognigems do you own? ";
-    cin >> cognigems;
-    cognigems = floor(cognigems / 10);
-    cognigems = cognigems * 100;
-    neededMetajewels = neededMetajewels - cognigems;
+    cin >> violetCognigems;
+    violetCognigems = floor(violetCognigems / 10);
+    violetCognigems = violetCognigems * 100;
+    neededMetajewels = neededMetajewels - violetCognigems;
     
     cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
 
