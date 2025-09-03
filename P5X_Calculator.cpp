@@ -54,17 +54,21 @@ int main(){
     rolls = rolls * 150;
     neededMetajewels = neededMetajewels - rolls;
 
+    //each ticket is 1 roll. thus it equates to 150 Metajewels to be used in a roll
     cout << "How many phantom tickets do you own? ";
     cin >> phantomTickets;
     phantomJewels = phantomTickets * 150;
     neededMetajewels = neededMetajewels - phantomJewels;
 
+    //with Violet Cognigems, it takes a minimum of 10 to purchase Metajewels and there is no upper limit per month to be bought
     cout <<  "How many Violet Cognigems do you own? ";
     cin >> violetCognigems;
     violetCognigems = floor(violetCognigems / 10);
     violetCognigems = violetCognigems * 100;
     neededMetajewels = neededMetajewels - violetCognigems;
 
+    //limit to 1000 being used in a month
+    //with Clear Cogingems since they can only be purchased by the 100, it is calculated using the maximum available to be bought within the month
     cout <<  "How many Clear Cognigems do you own? ";
     cin >> clearCognigems;
     clearCognigems = floor(clearCognigems / 1000);
