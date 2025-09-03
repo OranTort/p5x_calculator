@@ -64,6 +64,12 @@ int main(){
     violetCognigems = floor(violetCognigems / 10);
     violetCognigems = violetCognigems * 100;
     neededMetajewels = neededMetajewels - violetCognigems;
+
+    cout <<  "How many Clear Cognigems do you own? ";
+    cin >> clearCognigems;
+    clearCognigems = floor(clearCognigems / 1000);
+    clearCognigems = clearCognigems * 1000;
+    neededMetajewels = neededMetajewels - clearCognigems;
     
     cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
 
