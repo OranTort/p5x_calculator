@@ -6,7 +6,8 @@ using namespace std;
 int main(){
 
     int characterBanner;
-    int metajewels = 150;
+    const int metajewels = 150;
+    int bannerMetajewels;
     int ownedMetajewels;
     int neededMetajewels;
     int banners;
@@ -16,6 +17,7 @@ int main(){
     int clearCognigems;
     int rolls;
     char pass;
+    int neededRolls;
 
     cout << "Select the character banner you are planning to roll on?(80 or 110) ";
     cin >> characterBanner;
@@ -26,38 +28,46 @@ int main(){
         cout << "How many banners are you trying to save for? ";
         cin >> banners;
         banners = banners * 2;
-        metajewels = metajewels * 80 * banners;
-        cout << "For a guarantee, you will need " << metajewels << " metajewels.\n";
+        bannerMetajewels = metajewels * 80 * banners;
+        cout << "For a guarantee, you will need " << bannerMetajewels << " metajewels.\n";
 
     }
     else if (characterBanner == 110)
     {
         cout << "How many banners are you trying to save for? ";
         cin >> banners;
-        metajewels = metajewels * 110 * banners;
-        cout << "For a guarantee, you will need " << metajewels << " metajewels.\n";
+        bannerMetajewels = metajewels * 110 * banners;
+        cout << "For a guarantee, you will need " << bannerMetajewels << " metajewels.\n";
     }
     else{
         cout << "Please select either 80 or 110 banners." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         return characterBanner;
+
     }
 
-    cout << "Did you purchase a pass? ";
+    cout << "Did you purchase a pass? (y or n)";
     cin >> pass;
+
+    if(pass == 'y'){
+        cout << "Select the pass that was purchased: ";
+
+    }
     
     cout << "How many Metajewels do you currently own? ";
     cin >> ownedMetajewels;
-    neededMetajewels = metajewels - ownedMetajewels;
+    neededMetajewels = bannerMetajewels - ownedMetajewels;
 
     cout << "How many rolls have you done on the banner you are rolling for? ";
     cin >> rolls;
-    rolls = rolls * 150;
+    rolls = rolls * metajewels;
     neededMetajewels = neededMetajewels - rolls;
 
     //each ticket is 1 roll. thus it equates to 150 Metajewels to be used in a roll
     cout << "How many phantom tickets do you own? ";
     cin >> phantomTickets;
-    phantomJewels = phantomTickets * 150;
+    phantomJewels = phantomTickets * metajewels;
     neededMetajewels = neededMetajewels - phantomJewels;
 
     //with Violet Cognigems, it takes a minimum of 10 to purchase Metajewels and there is no upper limit per month to be bought
@@ -76,6 +86,9 @@ int main(){
     neededMetajewels = neededMetajewels - clearCognigems;
     
     cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
+    neededRolls = neededMetajewels / metajewels;
+    neededRolls = floor(neededRolls);
+    cout << "This equates to " << neededRolls << " rolls you will need to guarantee the character(s).\n";
 
     system("pause");
     return 0;
