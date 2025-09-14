@@ -18,6 +18,7 @@ int main(){
     int rolls;
     char pass;
     int neededRolls;
+    int cogCrystal;
 
     cout << "Select the character banner you are planning to roll on?(80 or 110) ";
     cin >> characterBanner;
@@ -47,13 +48,7 @@ int main(){
 
     }
 
-    cout << "Did you purchase a pass? (y or n)";
-    cin >> pass;
 
-    if(pass == 'y'){
-        cout << "Select the pass that was purchased: ";
-
-    }
     
     cout << "How many Metajewels do you currently own? ";
     cin >> ownedMetajewels;
@@ -69,6 +64,11 @@ int main(){
     cin >> phantomTickets;
     phantomJewels = phantomTickets * metajewels;
     neededMetajewels = neededMetajewels - phantomJewels;
+
+    cout <<  "How many Cognition Crystals do you own? ";
+    cin >> cogCrystal;
+    cogCrystal = metajewels * cogCrystal;
+    neededMetajewels = neededMetajewels - cogCrystal;
 
     //with Violet Cognigems, it takes a minimum of 10 to purchase Metajewels and there is no upper limit per month to be bought
     cout <<  "How many Violet Cognigems do you own? ";
