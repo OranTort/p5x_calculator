@@ -19,6 +19,7 @@ int main(){
     char pass;
     int neededRolls;
     int cogCrystal;
+    int weaponBanner;
 
     cout << "Select the character banner you are planning to roll on?(80 or 110) ";
     cin >> characterBanner;
@@ -30,7 +31,7 @@ int main(){
         cin >> banners;
         banners = banners * 2;
         bannerMetajewels = metajewels * 80 * banners;
-        cout << "For a guarantee, you will need " << bannerMetajewels << " metajewels.\n";
+        cout << "For a guarantee, you will need " << bannerMetajewels << " metajewels for the character banners.\n";
 
     }
     else if (characterBanner == 110)
@@ -38,7 +39,7 @@ int main(){
         cout << "How many banners are you trying to save for? ";
         cin >> banners;
         bannerMetajewels = metajewels * 110 * banners;
-        cout << "For a guarantee, you will need " << bannerMetajewels << " metajewels.\n";
+        cout << "For a guarantee, you will need " << bannerMetajewels << " metajewels for the character banners.\n";
     }
     else{
         cout << "Please select either 80 or 110 banners." << endl;
@@ -48,11 +49,16 @@ int main(){
 
     }
 
+    cout << "How many of the weapon banners are you planning to roll on? ";
+    cin >>weaponBanner;
+    weaponBanner = weaponBanner * 140 * metajewels;
+    cout << "For a guarantee you will need " << weaponBanner << " metajewels for the weapon banner.\n";
+
 
     
     cout << "How many Metajewels do you currently own? ";
     cin >> ownedMetajewels;
-    neededMetajewels = bannerMetajewels - ownedMetajewels;
+    neededMetajewels = bannerMetajewels + weaponBanner - ownedMetajewels;
 
     cout << "How many rolls have you done on the banner you are rolling for? ";
     cin >> rolls;
@@ -88,7 +94,7 @@ int main(){
     cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
     neededRolls = neededMetajewels / metajewels;
     neededRolls = floor(neededRolls);
-    cout << "This equates to " << neededRolls << " rolls you will need to guarantee the character(s).\n";
+    cout << "This equates to " << neededRolls << " rolls you will need to guarantee the character(s) and/or weapon(s).\n";
 
     system("pause");
     return 0;
