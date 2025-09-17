@@ -16,7 +16,7 @@ int main(){
     int violetCognigems;
     int clearCognigems;
     int rolls;
-    char pass;
+    char clearCognigemStore;
     int neededRolls;
     int cogCrystal;
     int weaponBanner;
@@ -83,13 +83,20 @@ int main(){
     violetCognigems = violetCognigems * 100;
     neededMetajewels = neededMetajewels - violetCognigems;
 
+    cout << "Were all the Metajewels bought from the the Clear Cognigem store?(Y or N) ";
+    cin >> clearCognigemStore;
+    if(clearCognigemStore == 'y'){
+
+        return clearCognigemStore;
+    }
+    else if(clearCognigemStore == 'n'){
     //limit to 1000 being used in a month
     //with Clear Cogingems since they can only be purchased by the 100, it is calculated using the maximum available to be bought within the month
     cout <<  "How many Clear Cognigems do you own? ";
     cin >> clearCognigems;
     clearCognigems = floor(clearCognigems / 1000);
     clearCognigems = clearCognigems * 1000;
-    neededMetajewels = neededMetajewels - clearCognigems;
+    neededMetajewels = neededMetajewels - clearCognigems;}
     
     cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
     neededRolls = neededMetajewels / metajewels;
