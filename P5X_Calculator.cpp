@@ -82,14 +82,6 @@ int main(){
     violetCognigems = floor(violetCognigems / 10);
     violetCognigems = violetCognigems * 100;
     neededMetajewels = neededMetajewels - violetCognigems;
-
-    //limit to 1000 being used in a month
-    //with Clear Cogingems since they can only be purchased by the 100, it is calculated using the maximum available to be bought within the month
-    cout <<  "How many Clear Cognigems do you own? ";
-    cin >> clearCognigems;
-    clearCognigems = floor(clearCognigems / 1000);
-    clearCognigems = clearCognigems * 1000;
-    neededMetajewels = neededMetajewels - clearCognigems;
     
     cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
     neededRolls = neededMetajewels / metajewels;
