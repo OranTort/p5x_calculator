@@ -5,21 +5,9 @@ using namespace std;
 
 int main(){
 
-    int characterBanner;
+    int characterBanner, neededRolls, cogCrystal, weaponBanner, bannerMetajewels, ownedMetajewels, neededMetajewels, banners, phantomTickets, phantomJewels, violetCognigems, clearCognigems, rolls;
     const int metajewels = 150;
-    int bannerMetajewels;
-    int ownedMetajewels;
-    int neededMetajewels;
-    int banners;
-    int phantomTickets;
-    int phantomJewels;
-    int violetCognigems;
-    int clearCognigems;
-    int rolls;
     char pass;
-    int neededRolls;
-    int cogCrystal;
-    int weaponBanner;
 
     cout << "Select the character banner you are planning to roll on?(80 or 110) ";
     cin >> characterBanner;
