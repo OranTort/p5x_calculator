@@ -2,16 +2,25 @@
 #include <cmath>
 
 using namespace std;
+void eighty;
+void onehundredten;
 
 int main(){
 
     int characterBanner, neededRolls, cogCrystal, weaponBanner, bannerMetajewels, ownedMetajewels, neededMetajewels, banners, phantomTickets, phantomJewels, violetCognigems, clearCognigems, rolls;
     const int metajewels = 150;
     char pass;
-
+    
     cout << "Select the character banner you are planning to roll on?(80 or 110) ";
     cin >> characterBanner;
 
+    switch(characterBanner){
+        case 80: eighty;
+            break;
+        case 110: onehundredten;
+            break;
+        default: "Please select either 80 or 110 banners.";
+    }
 
     if(characterBanner == 80){
 
@@ -31,10 +40,7 @@ int main(){
     }
     else{
         cout << "Please select either 80 or 110 banners." << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         return characterBanner;
-
     }
 
     cout << "How many of the weapon banners are you planning to roll on? ";
