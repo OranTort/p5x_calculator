@@ -5,7 +5,8 @@ using namespace std;
 
 int main(){
 
-    int characterBanner, neededRolls, cogCrystal, weaponBanner, bannerMetajewels, ownedMetajewels, neededMetajewels, banners, phantomTickets, phantomJewels, violetCognigems, clearCognigems, rolls;
+    int characterBanner, neededRolls, cogCrystal, bannerMetajewels, ownedMetajewels, neededMetajewels, banners, phantomTickets, phantomJewels, violetCognigems, clearCognigems, rolls;
+    int weaponBanner = 0;
     const int metajewels = 150;
     char pass, wPass;
     
@@ -39,13 +40,15 @@ int main(){
 
     if(wPass == 'Y'){
     cout << "How many of the weapon banners are you planning to roll on? ";
-    cin >>weaponBanner;
+    cin >> weaponBanner;
     weaponBanner = weaponBanner * 140 * metajewels;
     cout << "For a guarantee you will need " << weaponBanner << " metajewels for the weapon banner.\n";
 
-    return wPass;
-    }
+    //cout << "How many Millicoins do you currently own? ";
 
+    //cout << "How many rolls have you done on the weapon banner? ";
+
+    }
     
     cout << "How many Metajewels do you currently own? ";
     cin >> ownedMetajewels;
