@@ -42,6 +42,7 @@ int main(){
     wPass = toupper(wPass);
 
     if(wPass == 'Y'){
+    int metajewels = 100;
     cout << "How many of the weapon banners are you planning to roll on? ";
     cin >> weaponBanner;
     weaponBanner = weaponBanner * 140 * metajewels;
