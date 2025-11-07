@@ -55,6 +55,9 @@ int main(){
     //cout << "How many rolls have you done on the weapon banner? ";
 
     }
+    else if(wPass == 'N'){
+        millijewels = 0;
+    }
     
     cout << "How many Metajewels do you currently own? ";
     cin >> ownedMetajewels;
