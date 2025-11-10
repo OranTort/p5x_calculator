@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    int characterBanner, neededRolls, cogCrystal, bannerMetajewels, ownedMetajewels, neededMetajewels, banners, phantomTickets, phantomJewels, violetCognigems, clearCognigems, rolls;
+    int characterBanner, neededRolls, cogCrystal, bannerMetajewels, ownedMetajewels, neededMetajewels, banners, phantomTickets, phantomJewels, violetCognigems, clearCognigems, rolls, wRolls;
     int millicoins, millijewels;
     int weaponBanner = 0;
     const int metajewels = 150;
@@ -42,10 +42,10 @@ int main(){
     wPass = toupper(wPass);
 
     if(wPass == 'Y'){
-    int metajewels = 100;
+    int wMetajewels = 100;
     cout << "How many of the weapon banners are you planning to roll on? ";
     cin >> weaponBanner;
-    weaponBanner = weaponBanner * 140 * metajewels;
+    weaponBanner = weaponBanner * 140 * wMetajewels;
     cout << "For a guarantee you will need " << weaponBanner << " metajewels for the weapon banner.\n";
 
     cout << "How many Millicoins do you currently own? ";
@@ -54,10 +54,13 @@ int main(){
 
 
     //cout << "How many rolls have you done on the weapon banner? ";
+    //cin >> wRolls;
+    //wRolls = wRolls * wMetajewels;
 
     }
     else if(wPass == 'N'){
         millijewels = 0;
+        wRolls = 0;
     }
     
     cout << "How many Metajewels do you currently own? ";
@@ -67,7 +70,7 @@ int main(){
     cout << "How many rolls have you done on the banner you are rolling for? ";
     cin >> rolls;
     rolls = rolls * metajewels;
-    neededMetajewels = neededMetajewels - rolls;
+    neededMetajewels = neededMetajewels - rolls - wRolls;
 
     //each ticket is 1 roll. thus it equates to 150 Metajewels to be used in a roll
     cout << "How many phantom tickets do you own? ";
