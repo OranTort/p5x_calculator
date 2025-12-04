@@ -90,7 +90,7 @@ int main(){
     violetCognigems = violetCognigems * 100;
     neededMetajewels = neededMetajewels - violetCognigems;
     
-    cout << "You need " << neededMetajewels << " to reach the character(s) you desire.\n";
+    cout << "You need " << neededMetajewels << " more Metajewels to reach the character(s) you desire.\n";
     neededRolls = neededMetajewels / metajewels;
     neededRolls = floor(neededRolls);
     cout << "This equates to " << neededRolls << " rolls you will need to guarantee the character(s) and/or weapon(s).\n";
