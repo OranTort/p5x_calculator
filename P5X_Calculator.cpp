@@ -95,6 +95,8 @@ int main(){
     neededRolls = floor(neededRolls);
     cout << "This equates to " << neededRolls << " rolls you will need to guarantee the character(s) and/or weapon(s).\n";
 
+    std::cin.clear();
+    std::cin.get();
     system("pause");
     return 0;
 }
